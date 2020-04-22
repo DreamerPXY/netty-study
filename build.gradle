@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'com.google.protobuf' version '0.8.8'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
+    mavenCentral()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+tasks.withType(Javadoc) {
+    options.encoding = "UTF-8"
+}
+dependencies {
+// https://mvnrepository.com/artifact/io.netty/netty-all
+    compile group: 'io.netty', name: 'netty-all', version: '4.1.47.Final'
+    compile files('lib/envconfig-1.4.8.jar')
+//    compile group: 'ch.epfl.bluebrain.nexus', name: 'elastic-search-client_2.12', version: '0.10.44'
+    compile files('lib/krpc-0.2.47.jar')
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'com.google.protobuf:protobuf-java:3.11.4'
+    implementation 'com.google.protobuf:protobuf-java-util:3.11.4'
+    compile group: 'org.apache.thrift', name: 'libthrift', version: '0.13.0'
+    implementation 'io.grpc:grpc-netty-shaded:1.28.1'
+    implementation 'io.grpc:grpc-protobuf:1.28.1'
+    implementation 'io.grpc:grpc-stub:1.28.1'
+
+}
+protobuf {
+    protoc {
+        artifact = "com.google.protobuf:protoc:3.11.0"
+    }
+    plugins {
+        grpc {
+            artifact = 'io.grpc:protoc-gen-grpc-java:1.28.1'
+        }
+    }
+    generateProtoTasks {
+        all()*.plugins {
+            grpc {}
+        }
+    }
+}
