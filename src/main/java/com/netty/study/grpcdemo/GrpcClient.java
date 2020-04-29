@@ -1,7 +1,7 @@
 package com.netty.study.grpcdemo;
 
-import com.netty.study.proto.MyRequest;
-import com.netty.study.proto.MyResponse;
+import com.netty.study.proto.GetRealNameByUserNameReq;
+import com.netty.study.proto.GetRealNameByUserNameRes;
 import com.netty.study.proto.StudentServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
@@ -12,8 +12,7 @@ public class GrpcClient {
                 .usePlaintext().build();
         StudentServiceGrpc.StudentServiceBlockingStub blockingStub = StudentServiceGrpc.
                 newBlockingStub(managedChannel);
-        MyResponse myResponse = blockingStub.getRealNameByUserName(MyRequest.newBuilder().setUsername("zhangsan").build());
-
+        GetRealNameByUserNameRes myResponse = blockingStub.getRealNameByUserName(GetRealNameByUserNameReq.newBuilder().setUsername("zhangsan").build());
         System.out.println(myResponse.getRealname());
     }
 }

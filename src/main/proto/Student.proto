@@ -4,14 +4,40 @@ package com.netty.study.proto;
 option java_package = "com.netty.study.proto";
 option java_outer_classname = "StudentProto";
 option java_multiple_files = true;
+
 service StudentService {
-  rpc GetRealNameByUserName(MyRequest) returns (MyResponse){}
+  rpc GetRealNameByUserName(GetRealNameByUserNameReq) returns (GetRealNameByUserNameRes){}
+  rpc GetStudentByUserId(GetStudentByUserIdReq) returns(stream GetStudentByUserIdRes){}
+  rpc GetStudentByUserType(stream GetStudentByUserTypeReq) returns(GetStudentByUserTypeRes){}
+  rpc GetStudentByUserAge(stream GetStudentByUserAgeReq) returns(GetStudentByUserAgeRes){}
 }
-message MyRequest {
+message GetRealNameByUserNameReq {
   string username = 1;
 
 }
 
-message MyResponse{
+message GetRealNameByUserNameRes{
   string realname = 1;
+}
+
+message GetStudentByUserIdReq{
+  string userid = 1;
+}
+message GetStudentByUserIdRes{
+  string realname = 1;
+  string userid = 2;
+  string birthday = 3;
+}
+
+message GetStudentByUserTypeReq{
+  string usertype = 1;
+}
+message GetStudentByUserTypeRes{
+  int32 usernumber = 1;
+}
+message GetStudentByUserAgeReq{
+  int32 userage = 1;
+}
+message GetStudentByUserAgeRes{
+  string usercode = 1;
 }

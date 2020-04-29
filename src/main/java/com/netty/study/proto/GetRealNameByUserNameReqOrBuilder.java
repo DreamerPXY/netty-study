@@ -3,15 +3,15 @@
 
 package com.netty.study.proto;
 
-public interface MyRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:com.netty.study.proto.MyRequest)
+public interface GetRealNameByUserNameReqOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:com.netty.study.proto.GetRealNameByUserNameReq)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <code>string username = 1;</code>
    * @return The username.
    */
-  String getUsername();
+  java.lang.String getUsername();
   /**
    * <code>string username = 1;</code>
    * @return The bytes for username.

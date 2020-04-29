@@ -27,29 +27,29 @@ public final class StudentServiceGrpc {
   public static final String SERVICE_NAME = "com.netty.study.proto.StudentService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<MyRequest,
-      MyResponse> getGetRealNameByUserNameMethod;
+  private static volatile io.grpc.MethodDescriptor<com.netty.study.proto.GetRealNameByUserNameReq,
+      com.netty.study.proto.GetRealNameByUserNameRes> getGetRealNameByUserNameMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetRealNameByUserName",
-      requestType = MyRequest.class,
-      responseType = MyResponse.class,
+      requestType = com.netty.study.proto.GetRealNameByUserNameReq.class,
+      responseType = com.netty.study.proto.GetRealNameByUserNameRes.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<MyRequest,
-      MyResponse> getGetRealNameByUserNameMethod() {
-    io.grpc.MethodDescriptor<MyRequest, MyResponse> getGetRealNameByUserNameMethod;
+  public static io.grpc.MethodDescriptor<com.netty.study.proto.GetRealNameByUserNameReq,
+      com.netty.study.proto.GetRealNameByUserNameRes> getGetRealNameByUserNameMethod() {
+    io.grpc.MethodDescriptor<com.netty.study.proto.GetRealNameByUserNameReq, com.netty.study.proto.GetRealNameByUserNameRes> getGetRealNameByUserNameMethod;
     if ((getGetRealNameByUserNameMethod = StudentServiceGrpc.getGetRealNameByUserNameMethod) == null) {
       synchronized (StudentServiceGrpc.class) {
         if ((getGetRealNameByUserNameMethod = StudentServiceGrpc.getGetRealNameByUserNameMethod) == null) {
           StudentServiceGrpc.getGetRealNameByUserNameMethod = getGetRealNameByUserNameMethod =
-              io.grpc.MethodDescriptor.<MyRequest, MyResponse>newBuilder()
+              io.grpc.MethodDescriptor.<com.netty.study.proto.GetRealNameByUserNameReq, com.netty.study.proto.GetRealNameByUserNameRes>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetRealNameByUserName"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MyRequest.getDefaultInstance()))
+                  com.netty.study.proto.GetRealNameByUserNameReq.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  MyResponse.getDefaultInstance()))
+                  com.netty.study.proto.GetRealNameByUserNameRes.getDefaultInstance()))
               .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetRealNameByUserName"))
               .build();
         }
@@ -58,13 +58,106 @@ public final class StudentServiceGrpc {
     return getGetRealNameByUserNameMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserIdReq,
+      com.netty.study.proto.GetStudentByUserIdRes> getGetStudentByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStudentByUserId",
+      requestType = com.netty.study.proto.GetStudentByUserIdReq.class,
+      responseType = com.netty.study.proto.GetStudentByUserIdRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserIdReq,
+      com.netty.study.proto.GetStudentByUserIdRes> getGetStudentByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserIdReq, com.netty.study.proto.GetStudentByUserIdRes> getGetStudentByUserIdMethod;
+    if ((getGetStudentByUserIdMethod = StudentServiceGrpc.getGetStudentByUserIdMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getGetStudentByUserIdMethod = StudentServiceGrpc.getGetStudentByUserIdMethod) == null) {
+          StudentServiceGrpc.getGetStudentByUserIdMethod = getGetStudentByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.netty.study.proto.GetStudentByUserIdReq, com.netty.study.proto.GetStudentByUserIdRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserIdReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserIdRes.getDefaultInstance()))
+              .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStudentByUserId"))
+              .build();
+        }
+      }
+    }
+    return getGetStudentByUserIdMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserTypeReq,
+      com.netty.study.proto.GetStudentByUserTypeRes> getGetStudentByUserTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStudentByUserType",
+      requestType = com.netty.study.proto.GetStudentByUserTypeReq.class,
+      responseType = com.netty.study.proto.GetStudentByUserTypeRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserTypeReq,
+      com.netty.study.proto.GetStudentByUserTypeRes> getGetStudentByUserTypeMethod() {
+    io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserTypeReq, com.netty.study.proto.GetStudentByUserTypeRes> getGetStudentByUserTypeMethod;
+    if ((getGetStudentByUserTypeMethod = StudentServiceGrpc.getGetStudentByUserTypeMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getGetStudentByUserTypeMethod = StudentServiceGrpc.getGetStudentByUserTypeMethod) == null) {
+          StudentServiceGrpc.getGetStudentByUserTypeMethod = getGetStudentByUserTypeMethod =
+              io.grpc.MethodDescriptor.<com.netty.study.proto.GetStudentByUserTypeReq, com.netty.study.proto.GetStudentByUserTypeRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentByUserType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserTypeReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserTypeRes.getDefaultInstance()))
+              .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStudentByUserType"))
+              .build();
+        }
+      }
+    }
+    return getGetStudentByUserTypeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserAgeReq,
+      com.netty.study.proto.GetStudentByUserAgeRes> getGetStudentByUserAgeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetStudentByUserAge",
+      requestType = com.netty.study.proto.GetStudentByUserAgeReq.class,
+      responseType = com.netty.study.proto.GetStudentByUserAgeRes.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+  public static io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserAgeReq,
+      com.netty.study.proto.GetStudentByUserAgeRes> getGetStudentByUserAgeMethod() {
+    io.grpc.MethodDescriptor<com.netty.study.proto.GetStudentByUserAgeReq, com.netty.study.proto.GetStudentByUserAgeRes> getGetStudentByUserAgeMethod;
+    if ((getGetStudentByUserAgeMethod = StudentServiceGrpc.getGetStudentByUserAgeMethod) == null) {
+      synchronized (StudentServiceGrpc.class) {
+        if ((getGetStudentByUserAgeMethod = StudentServiceGrpc.getGetStudentByUserAgeMethod) == null) {
+          StudentServiceGrpc.getGetStudentByUserAgeMethod = getGetStudentByUserAgeMethod =
+              io.grpc.MethodDescriptor.<com.netty.study.proto.GetStudentByUserAgeReq, com.netty.study.proto.GetStudentByUserAgeRes>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.CLIENT_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetStudentByUserAge"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserAgeReq.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.netty.study.proto.GetStudentByUserAgeRes.getDefaultInstance()))
+              .setSchemaDescriptor(new StudentServiceMethodDescriptorSupplier("GetStudentByUserAge"))
+              .build();
+        }
+      }
+    }
+    return getGetStudentByUserAgeMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
   public static StudentServiceStub newStub(io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<StudentServiceStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<StudentServiceStub>() {
-        @Override
+        @java.lang.Override
         public StudentServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new StudentServiceStub(channel, callOptions);
         }
@@ -79,7 +172,7 @@ public final class StudentServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<StudentServiceBlockingStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<StudentServiceBlockingStub>() {
-        @Override
+        @java.lang.Override
         public StudentServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new StudentServiceBlockingStub(channel, callOptions);
         }
@@ -94,7 +187,7 @@ public final class StudentServiceGrpc {
       io.grpc.Channel channel) {
     io.grpc.stub.AbstractStub.StubFactory<StudentServiceFutureStub> factory =
       new io.grpc.stub.AbstractStub.StubFactory<StudentServiceFutureStub>() {
-        @Override
+        @java.lang.Override
         public StudentServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
           return new StudentServiceFutureStub(channel, callOptions);
         }
@@ -108,20 +201,62 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(MyRequest request,
-                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
+    public void getRealNameByUserName(com.netty.study.proto.GetRealNameByUserNameReq request,
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetRealNameByUserNameRes> responseObserver) {
       asyncUnimplementedUnaryCall(getGetRealNameByUserNameMethod(), responseObserver);
     }
 
-    @Override public final io.grpc.ServerServiceDefinition bindService() {
+    /**
+     */
+    public void getStudentByUserId(com.netty.study.proto.GetStudentByUserIdReq request,
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserIdRes> responseObserver) {
+      asyncUnimplementedUnaryCall(getGetStudentByUserIdMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserTypeReq> getStudentByUserType(
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserTypeRes> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetStudentByUserTypeMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserAgeReq> getStudentByUserAge(
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserAgeRes> responseObserver) {
+      return asyncUnimplementedStreamingCall(getGetStudentByUserAgeMethod(), responseObserver);
+    }
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGetRealNameByUserNameMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                MyRequest,
-                MyResponse>(
+                com.netty.study.proto.GetRealNameByUserNameReq,
+                com.netty.study.proto.GetRealNameByUserNameRes>(
                   this, METHODID_GET_REAL_NAME_BY_USER_NAME)))
+          .addMethod(
+            getGetStudentByUserIdMethod(),
+            asyncServerStreamingCall(
+              new MethodHandlers<
+                com.netty.study.proto.GetStudentByUserIdReq,
+                com.netty.study.proto.GetStudentByUserIdRes>(
+                  this, METHODID_GET_STUDENT_BY_USER_ID)))
+          .addMethod(
+            getGetStudentByUserTypeMethod(),
+            asyncClientStreamingCall(
+              new MethodHandlers<
+                com.netty.study.proto.GetStudentByUserTypeReq,
+                com.netty.study.proto.GetStudentByUserTypeRes>(
+                  this, METHODID_GET_STUDENT_BY_USER_TYPE)))
+          .addMethod(
+            getGetStudentByUserAgeMethod(),
+            asyncClientStreamingCall(
+              new MethodHandlers<
+                com.netty.study.proto.GetStudentByUserAgeReq,
+                com.netty.study.proto.GetStudentByUserAgeRes>(
+                  this, METHODID_GET_STUDENT_BY_USER_AGE)))
           .build();
     }
   }
@@ -134,7 +269,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StudentServiceStub(channel, callOptions);
@@ -142,10 +277,34 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public void getRealNameByUserName(MyRequest request,
-                                      io.grpc.stub.StreamObserver<MyResponse> responseObserver) {
+    public void getRealNameByUserName(com.netty.study.proto.GetRealNameByUserNameReq request,
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetRealNameByUserNameRes> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetRealNameByUserNameMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getStudentByUserId(com.netty.study.proto.GetStudentByUserIdReq request,
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserIdRes> responseObserver) {
+      asyncServerStreamingCall(
+          getChannel().newCall(getGetStudentByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserTypeReq> getStudentByUserType(
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserTypeRes> responseObserver) {
+      return asyncClientStreamingCall(
+          getChannel().newCall(getGetStudentByUserTypeMethod(), getCallOptions()), responseObserver);
+    }
+
+    /**
+     */
+    public io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserAgeReq> getStudentByUserAge(
+        io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserAgeRes> responseObserver) {
+      return asyncClientStreamingCall(
+          getChannel().newCall(getGetStudentByUserAgeMethod(), getCallOptions()), responseObserver);
     }
   }
 
@@ -157,7 +316,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StudentServiceBlockingStub(channel, callOptions);
@@ -165,9 +324,17 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public MyResponse getRealNameByUserName(MyRequest request) {
+    public com.netty.study.proto.GetRealNameByUserNameRes getRealNameByUserName(com.netty.study.proto.GetRealNameByUserNameReq request) {
       return blockingUnaryCall(
           getChannel(), getGetRealNameByUserNameMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<com.netty.study.proto.GetStudentByUserIdRes> getStudentByUserId(
+        com.netty.study.proto.GetStudentByUserIdReq request) {
+      return blockingServerStreamingCall(
+          getChannel(), getGetStudentByUserIdMethod(), getCallOptions(), request);
     }
   }
 
@@ -179,7 +346,7 @@ public final class StudentServiceGrpc {
       super(channel, callOptions);
     }
 
-    @Override
+    @java.lang.Override
     protected StudentServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       return new StudentServiceFutureStub(channel, callOptions);
@@ -187,14 +354,17 @@ public final class StudentServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<MyResponse> getRealNameByUserName(
-        MyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.netty.study.proto.GetRealNameByUserNameRes> getRealNameByUserName(
+        com.netty.study.proto.GetRealNameByUserNameReq request) {
       return futureUnaryCall(
           getChannel().newCall(getGetRealNameByUserNameMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_GET_REAL_NAME_BY_USER_NAME = 0;
+  private static final int METHODID_GET_STUDENT_BY_USER_ID = 1;
+  private static final int METHODID_GET_STUDENT_BY_USER_TYPE = 2;
+  private static final int METHODID_GET_STUDENT_BY_USER_AGE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,24 +379,34 @@ public final class StudentServiceGrpc {
       this.methodId = methodId;
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_REAL_NAME_BY_USER_NAME:
-          serviceImpl.getRealNameByUserName((MyRequest) request,
-              (io.grpc.stub.StreamObserver<MyResponse>) responseObserver);
+          serviceImpl.getRealNameByUserName((com.netty.study.proto.GetRealNameByUserNameReq) request,
+              (io.grpc.stub.StreamObserver<com.netty.study.proto.GetRealNameByUserNameRes>) responseObserver);
+          break;
+        case METHODID_GET_STUDENT_BY_USER_ID:
+          serviceImpl.getStudentByUserId((com.netty.study.proto.GetStudentByUserIdReq) request,
+              (io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserIdRes>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @Override
-    @SuppressWarnings("unchecked")
+    @java.lang.Override
+    @java.lang.SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
+        case METHODID_GET_STUDENT_BY_USER_TYPE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getStudentByUserType(
+              (io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserTypeRes>) responseObserver);
+        case METHODID_GET_STUDENT_BY_USER_AGE:
+          return (io.grpc.stub.StreamObserver<Req>) serviceImpl.getStudentByUserAge(
+              (io.grpc.stub.StreamObserver<com.netty.study.proto.GetStudentByUserAgeRes>) responseObserver);
         default:
           throw new AssertionError();
       }
@@ -237,12 +417,12 @@ public final class StudentServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     StudentServiceBaseDescriptorSupplier() {}
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return StudentProto.getDescriptor();
+      return com.netty.study.proto.StudentProto.getDescriptor();
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("StudentService");
     }
@@ -262,7 +442,7 @@ public final class StudentServiceGrpc {
       this.methodName = methodName;
     }
 
-    @Override
+    @java.lang.Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
@@ -279,6 +459,9 @@ public final class StudentServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new StudentServiceFileDescriptorSupplier())
               .addMethod(getGetRealNameByUserNameMethod())
+              .addMethod(getGetStudentByUserIdMethod())
+              .addMethod(getGetStudentByUserTypeMethod())
+              .addMethod(getGetStudentByUserAgeMethod())
               .build();
         }
       }
