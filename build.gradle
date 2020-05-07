@@ -22,9 +22,9 @@ tasks.withType(Javadoc) {
 dependencies {
 // https://mvnrepository.com/artifact/io.netty/netty-all
     compile group: 'io.netty', name: 'netty-all', version: '4.1.47.Final'
-//    compile files('lib/envconfig-1.4.8.jar')
+    compile files('lib/envconfig-1.4.8.jar')
 //    compile group: 'ch.epfl.bluebrain.nexus', name: 'elastic-search-client_2.12', version: '0.10.44'
-//    compile files('lib/krpc-0.2.47.jar')
+    compile files('lib/krpc-0.2.47.jar')
     testCompile group: 'junit', name: 'junit', version: '4.12'
     implementation 'com.google.protobuf:protobuf-java:3.11.4'
     implementation 'com.google.protobuf:protobuf-java-util:3.11.4'

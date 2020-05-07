@@ -15,7 +15,7 @@ public class GrpcServer {
         Runtime runtime = Runtime.getRuntime();
         runtime.addShutdownHook(new Thread(() -> {
             //
-            System.out.println("jvm虚拟机关闭");
+            System.out.println("jvm has be closed");
             //关闭服务器
             stop();
         }));
